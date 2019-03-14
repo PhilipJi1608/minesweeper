@@ -3,7 +3,61 @@ document.addEventListener('DOMContentLoaded', startGame)
 // Define your `board` object here!
 
 var board = {
-  cells: [
+  cells0: [
+    {row: 0, col: 0, isMine: false, hidden: true}, 
+    {row: 0, col: 1, isMine: true, hidden: true},
+    {row: 0, col: 2, isMine: false, hidden: true},
+    {row: 0, col: 3, isMine: false, hidden: true},
+    {row: 1, col: 0, isMine: true, hidden: true},
+    {row: 1, col: 1, isMine: false, hidden: true},
+    {row: 1, col: 2, isMine: false, hidden: true},
+    {row: 1, col: 3, isMine: false, hidden: true},
+    {row: 2, col: 0, isMine: false, hidden: true}, 
+    {row: 2, col: 1, isMine: false, hidden: true},
+    {row: 2, col: 2, isMine: false, hidden: true},
+    {row: 2, col: 3, isMine: true, hidden: true},
+    {row: 3, col: 0, isMine: false, hidden: true}, 
+    {row: 3, col: 1, isMine: false, hidden: true},
+    {row: 3, col: 2, isMine: true, hidden: true},
+    {row: 3, col: 3, isMine: false, hidden: true},
+  ],
+  cells1: [
+    {row: 0, col: 0, isMine: false, hidden: true}, 
+    {row: 0, col: 1, isMine: true, hidden: true},
+    {row: 0, col: 2, isMine: false, hidden: true},
+    {row: 0, col: 3, isMine: false, hidden: true},
+    {row: 1, col: 0, isMine: true, hidden: true},
+    {row: 1, col: 1, isMine: false, hidden: true},
+    {row: 1, col: 2, isMine: false, hidden: true},
+    {row: 1, col: 3, isMine: false, hidden: true},
+    {row: 2, col: 0, isMine: false, hidden: true}, 
+    {row: 2, col: 1, isMine: false, hidden: true},
+    {row: 2, col: 2, isMine: false, hidden: true},
+    {row: 2, col: 3, isMine: true, hidden: true},
+    {row: 3, col: 0, isMine: false, hidden: true}, 
+    {row: 3, col: 1, isMine: false, hidden: true},
+    {row: 3, col: 2, isMine: true, hidden: true},
+    {row: 3, col: 3, isMine: false, hidden: true},
+  ],
+  cells2: [
+    {row: 0, col: 0, isMine: false, hidden: true}, 
+    {row: 0, col: 1, isMine: true, hidden: true},
+    {row: 0, col: 2, isMine: false, hidden: true},
+    {row: 0, col: 3, isMine: false, hidden: true},
+    {row: 1, col: 0, isMine: true, hidden: true},
+    {row: 1, col: 1, isMine: false, hidden: true},
+    {row: 1, col: 2, isMine: false, hidden: true},
+    {row: 1, col: 3, isMine: false, hidden: true},
+    {row: 2, col: 0, isMine: false, hidden: true}, 
+    {row: 2, col: 1, isMine: false, hidden: true},
+    {row: 2, col: 2, isMine: false, hidden: true},
+    {row: 2, col: 3, isMine: true, hidden: true},
+    {row: 3, col: 0, isMine: false, hidden: true}, 
+    {row: 3, col: 1, isMine: false, hidden: true},
+    {row: 3, col: 2, isMine: true, hidden: true},
+    {row: 3, col: 3, isMine: false, hidden: true},
+  ],
+  cells3: [
     {row: 0, col: 0, isMine: false, hidden: true}, 
     {row: 0, col: 1, isMine: true, hidden: true},
     {row: 0, col: 2, isMine: false, hidden: true},
@@ -28,7 +82,7 @@ var board = {
 
 
 
-
+function startGame () {
 
 
 // for ([initialization]; [condition]; [final-expression])
