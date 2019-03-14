@@ -57,7 +57,7 @@ var board = {
     {row: 3, col: 1, isMine: false, hidden: true},
     {row: 3, col: 2, isMine: true, hidden: true},
     {row: 3, col: 3, isMine: false, hidden: true},
-  ]
+  ],
   cells3: [
     {row: 0, col: 0, isMine: false, hidden: true}, 
     {row: 0, col: 1, isMine: true, hidden: true},
