@@ -4,42 +4,78 @@ document.addEventListener('DOMContentLoaded', startGame)
 
 var board = {
   cells: [
-    {row: 0, col: 0, isMine: false, hidden: true}, 
-    {row: 0, col: 1, isMine: true, hidden: true},
-    {row: 0, col: 2, isMine: false, hidden: true},
-    {row: 0, col: 3, isMine: false, hidden: true},
-    {row: 0, col: 4, isMine: false, hidden: true},
-    {row: 0, col: 5, isMine: false, hidden: true},
-    {row: 1, col: 0, isMine: false, hidden: true}, 
-    {row: 1, col: 1, isMine: false, hidden: true},
-    {row: 1, col: 2, isMine: false, hidden: true},
-    {row: 1, col: 3, isMine: false, hidden: true},
-    {row: 1, col: 4, isMine: false, hidden: true},
-    {row: 1, col: 5, isMine: true, hidden: true},
-    {row: 2, col: 0, isMine: true, hidden: true}, 
-    {row: 2, col: 1, isMine: false, hidden: true},
-    {row: 2, col: 2, isMine: false, hidden: true},
-    {row: 2, col: 3, isMine: false, hidden: true},
-    {row: 2, col: 4, isMine: false, hidden: true},
-    {row: 2, col: 5, isMine: false, hidden: true},
-    {row: 3, col: 0, isMine: false, hidden: true}, 
-    {row: 3, col: 1, isMine: false, hidden: true},
-    {row: 3, col: 2, isMine: true, hidden: true},
-    {row: 3, col: 3, isMine: false, hidden: true},
-    {row: 3, col: 4, isMine: false, hidden: true},
-    {row: 3, col: 5, isMine: false, hidden: true},
-    {row: 4, col: 0, isMine: false, hidden: true}, 
-    {row: 4, col: 1, isMine: false, hidden: true},
-    {row: 4, col: 2, isMine: false, hidden: true},
-    {row: 4, col: 3, isMine: false, hidden: true},
-    {row: 4, col: 4, isMine: true, hidden: true},
-    {row: 4, col: 5, isMine: false, hidden: true},
-    {row: 5, col: 0, isMine: false, hidden: true}, 
-    {row: 5, col: 1, isMine: false, hidden: true},
-    {row: 5, col: 2, isMine: false, hidden: true},
-    {row: 5, col: 3, isMine: true, hidden: true},
-    {row: 5, col: 4, isMine: false, hidden: true},
-    {row: 5, col: 5, isMine: false, hidden: true},
+    {row: 0, col: 0, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    }, 
+    {row: 0, col: 1, isMine: true, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 0, col: 2, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 0, col: 3, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 0, col: 4, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 0, col: 5, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 1, col: 0, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    }, 
+    {row: 1, col: 1, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 1, col: 2, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 1, col: 3, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 1, col: 4, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 1, col: 5, isMine: true, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 2, col: 0, isMine: true, hidden: true, surroundingMines: (countSurroundingMines)
+    }, 
+    {row: 2, col: 1, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 2, col: 2, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 2, col: 3, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 2, col: 4, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 2, col: 5, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 3, col: 0, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    }, 
+    {row: 3, col: 1, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 3, col: 2, isMine: true, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 3, col: 3, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 3, col: 4, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 3, col: 5, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 4, col: 0, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    }, 
+    {row: 4, col: 1, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 4, col: 2, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 4, col: 3, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 4, col: 4, isMine: true, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 4, col: 5, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 5, col: 0, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 5, col: 1, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 5, col: 2, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 5, col: 3, isMine: true, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 5, col: 4, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
+    {row: 5, col: 5, isMine: false, hidden: true, surroundingMines: (countSurroundingMines)
+    },
   ]
 } 
 
@@ -49,9 +85,11 @@ var board = {
 
 
 function startGame () {
-
-
-// for ([initialization]; [condition]; [final-expression])
+  for (var i = 0; i < board.cells.length; i++) {
+      board.cells[i].surroundingMines = countSurroundingMines(
+        board.cells[i]);
+  }
+//forward loop through the cells to find the number of surrounding mines
 
 // array of objects = board.cells
 
@@ -78,6 +116,20 @@ function checkForWin () {
 //
 // It will return cell objects in an array. You should loop through 
 // them, counting the number of times `cell.isMine` is true.
-function countSurroundingMines (cell) {
+function countSurroundingMines (cell) { // function name(parameter) {
+  // code to be executed
+
+
+  var mineCount = 0; //initiate loop
+
+  var surroundingCells = getSurroundingCells(cell.row, cell.col); //retrieve cells around other cells that have bombs within the array
+
+  for (var i = 0; i <
+    surroundingCells.length; i++){ //if there are mines in the surrounding cells, add 1
+      if (surroundingCells[i].isMine === true) 
+        {mineCount ++; //boolean for the presence of mines
+      }
+    }
+    return mineCount //return value
 }
 
